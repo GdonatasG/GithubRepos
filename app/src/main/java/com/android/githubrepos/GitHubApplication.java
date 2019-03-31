@@ -3,6 +3,8 @@ package com.android.githubrepos;
 import android.app.Activity;
 import android.app.Application;
 
+import com.android.githubrepos.di.DaggerApplicationComponent;
+
 import javax.inject.Inject;
 
 import dagger.android.AndroidInjector;

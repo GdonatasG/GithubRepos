@@ -3,6 +3,13 @@ package com.android.githubrepos.di;
 import android.content.Context;
 
 import com.android.githubrepos.GitHubApplication;
+import com.android.githubrepos.data.GitHubRestAdapter;
+import com.android.githubrepos.data.RepositoryDataSourceImpl;
+import com.android.githubrepos.data.RepositoryDataSourceInterface;
+import com.android.githubrepos.data.UrlManager;
+import com.android.githubrepos.error.ErrorInterceptor;
+import com.android.githubrepos.util.BaseSchedulerProvider;
+import com.android.githubrepos.util.SchedulerProvider;
 
 import java.util.concurrent.TimeUnit;
 
@@ -10,6 +17,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import io.reactivex.Scheduler;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
