@@ -18,7 +18,10 @@ import android.widget.Toast;
 
 import com.android.githubrepos.R;
 import com.android.githubrepos.main.MainActivity;
+import com.android.githubrepos.viewmodel.RepositoryListItem;
 import com.bumptech.glide.Glide;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -147,7 +150,7 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
             Glide.with(ListActivity.this)
                     .load(repo.getRepoAvatarUrl())
 
-                    .into(holder.userAvatar)            ;
+                    .into(holder.userAvatar);
 
             holder.description.setText(
                     repo.getRepoDescription()
